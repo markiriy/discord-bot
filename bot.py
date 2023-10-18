@@ -37,7 +37,7 @@ type_to_name = {
 
 # возвращение гифок по тегу
 def get_gif(search_term):
-    tenorkey = "AIzaSyDeTVQ-jqVA5NP_xAKgjdlgPlm-CCzQY74"
+    tenorkey = "" #тут ключ
     ckey = "my_test_app"
     lmt = 50
     response = requests.get("https://tenor.googleapis.com/v2/search?q=%s&key=%s&client_key=%s&limit=%s"
