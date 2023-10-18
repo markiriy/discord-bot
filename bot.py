@@ -132,7 +132,7 @@ async def musicstreaming(message):
     video_ids = re.findall(r"album/(\S{7})/track/(\S{8})", html.read().decode())
     #  await message.send(f"https://music.yandex.ru/album/{albumid}/track/{trackid}")
     source = FFmpegPCMAudio(html.url)  # converts the audio source into a source discord can use
-    channel = client.get_channel(706522953613049910)
+    channel = client.get_channel() #тут айди
     voice = await channel.connect()
     voice.play(source)
 
@@ -140,9 +140,9 @@ async def musicstreaming(message):
 #  шлет серегу
 @client.event
 async def serega(member, prev, cur):
-    if not prev.channel and cur.channel and member.id == 376430602078912514:
+    if not prev.channel and cur.channel and member.id == : #тут айди
         print(f'{member} хуила')
-        channel = client.get_channel(706522953613049910)
+        channel = client.get_channel() #тут айди
         voice = await channel.connect()
         voice.play(discord.FFmpegPCMAudio('seregashort.mp3'))
         await asyncio.sleep(6)
